@@ -1,0 +1,133 @@
+@import "variables";
+
+body{
+	font-family: $f_sans-reg;
+	background-color: #fff;
+}
+
+.ctz_main-masthead{
+	background-color: #2098ca;
+	padding: 100px 0px 0px 0px;
+	position: relative;
+	z-index: 999;
+	.ctz_intro-text{
+		font-size: 40px;
+		font-family: $f_sans-med;
+		padding: 0px 20px 30px 20px;
+		color: #fff;
+	}
+	.ctz_sub-text{
+		font-size: 20px;
+		padding: 0px 20px 30px 20px;
+		font-family: $f_sans-med;
+		color: #fff;
+	}
+}
+.ctz_main-logo{
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 10px;
+	img{
+		width: 100%;
+		max-width: 120px;
+		display: block;
+		padding: 20px 0px 20px 10px;
+	}
+}
+.ctz_pop-bar{
+	background-color: rgba(255,255,255,0.2);
+	padding: 30px 20px 30px 20px;
+	.ctz_section-header{
+		font-size: 20px;
+		font-family: $f_sans-med;
+		color: #fff;
+	}
+}
+.tocify-wrapper{
+	.tocify-header{
+		margin-bottom: 20px;
+	}
+	.tocify-header:last-of-type{
+		margin-bottom: 0px;
+	}
+}
+.ctz_search-bar{
+	input[type="text"]{
+		padding: 10px;
+		border-radius: 5px;
+		border: 0px;
+		display: block;
+		margin-top: 15px;
+	}
+}
+.ctz_pop-items{
+	ul{
+		list-style: none;
+		margin-left: 0px;
+		padding-left: 0px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		li{
+			display: inline-block;
+			margin-right: 5px;
+			a{
+				color: #fff;
+				padding: 10px;
+				border: 1px solid #fff;
+				border-radius: 5px;
+				font-family: $f_sans-med;
+				font-size: 14px;
+				text-decoration: none;
+				@include easing(350ms);
+				&:hover{
+					@include easing(350ms);
+					background-color: rgba(255,255,255,0.2);
+				}
+			}
+		}
+		li:last-of-type{margin-right: 0px;}
+	}
+}
+.search-results{display: none;}
+ul.search-results.visible{
+	list-style: none;
+	display: block;
+	margin-left: 0px;
+	margin-top: 15px;
+	padding: 15px;
+	background-color: #fff;
+	li{
+		a{
+			color: #555;
+			text-decoration: none;
+			font-family: $f_sans-med;
+			font-size: 14px;
+			padding: 10px;
+			display: block;
+			@include easing(350ms);
+			&:hover{
+				@include easing(350ms);
+				padding-left: 10px;
+				margin-left: 15px;
+				color: #999;
+				border-left: 3px solid #999;
+			}
+		}
+	}
+}
+.tocify-wrapper{
+	.tocify-subheader{
+		li{
+			font-family: $f_sans-med;
+			margin-bottom: 5px;
+			margin-left: 10px;
+		}
+		li:last-of-type{margin-bottom: 0px;}
+	}
+}
+td.gutter{
+	pre.lineno{
+		border-bottom: 1px solid #ddd;
+		color: #45C8E7;
+	}
+}
