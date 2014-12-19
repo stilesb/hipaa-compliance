@@ -45,7 +45,7 @@ Information System Activity Review (Req) | Implement procedures to regularly rev
 ##Assigned Security Responsibility - 164.308(a)(2)
 
 ```
-Catalyze, Inc. has formally assigned and documented its security officer. Our security office is [Ben Uphoff](malto:ben@catalyze.io).
+Catalyze, Inc. has formally assigned and documented its security officer. Our security office is Ben Uphoff. He can be reached by email at ben@catalyze.io.
 ```
 
 Standard | Description
