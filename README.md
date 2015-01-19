@@ -4,20 +4,15 @@
 
 **Requirements**
 
-- Ruby -v 1.9.3 or newer, *[RVM](http://rvm.io/) is highly recommend using*
-- Bundler, `gem install bundler`
-- Middleman gem, `gem install middleman`
-- Sass (only if you're changing styles), `gem install sass`
+- Ruby -v 1.9.3 or newer, *I highly recommend using [RVM](http://rvm.io/)*
+- Bundler, `sudo gem install bundler`
+- Middleman gem, `sudo gem install middleman`
+- Sass, `sudo gem install sass`
 
 **Setup**
 
-- Clone this repo, `git clone https://github.com/catalyzeio/HIPAA.git`
-- Navigate into this repo, `cd HIPAA`
-- Install gems, `bundle install`
+- Clone this repo, `git clone https://github.com/catalyzeio/catalyze-internal-wiki.git`
+- Navigate to this repo, `cd catalyze-internal-wiki`
+- Install gems, `bundle install` or `sudo bundle install` or if you have RVM simply run `bundle`
 - Run the server, `middleman`
 - View the site locally, `http://0.0.0.0:4567/`
-
-### Contributing
-
-- All contributions require a pull request
-- If your pull request is appropriate it will be merged and subsequently published
