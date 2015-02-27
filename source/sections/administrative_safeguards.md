@@ -1,17 +1,17 @@
 #Administrative Safeguards (see <a href="http://www.hhs.gov/ocr/privacy/hipaa/administrative/securityrule/adminsafeguards.pdf">164.308</a>)
 
-Taken directly from the wording of the Security Rule, administrative safeguards are *administrative actions, and policies and procedures, to manage the selection, development, implementation, and maintenance of security measures to protect electronic protected health information and to manage the conduct of the covered entityâ€™s workforce in relation to the protection of that information.*
+Taken directly from the wording of the Security Rule, administrative safeguards are *administrative actions, and policies and procedures, to manage the selection, development, implementation, and maintenance of security measures to protect electronic protected health information and to manage the conduct of the covered entity's workforce in relation to the protection of that information.*
 
-There aren't specific security settings in this section, and the most important area covered is the risk assessment. The Risk assessments is a great process for any organization that wants to become compliant.
+There aren't specific security settings in this section, and the most important area covered is the risk assessment. The risk assessment is a fundamental process for any organization that wants to become compliant.
 
 ##Security Management Process - 164.308(a)(1)(i)
 
 ```
-Catalyze, Inc. has a risk management policy that defines the risk analysis and risk management process in place. Catalyze uses NIST800-30 and 800-26 for performing risk analysis. Our policy begins with an inventory of all Catalyze systems, mapping of where ePHI is processed, transmitted, or stored, identification of threats, risks, and likelihood, and the mitigation of risks. Policies address risk inherent within the environment and mitigating the risk to an acceptable and reasonable level.
+Catalyze, Inc. has a risk management policy that defines the risk analysis and risk management process. This policy is operationalized with processes to conduct regularly risk assessments. Catalyze uses NIST800-30 and 800-26 for performing risk analysis. Our policy begins with an inventory of all Catalyze systems, mapping of where ePHI is processed, transmitted, or stored, identification of threats, risks, and likelihood, and the mitigation of risks. Policies address risk inherent within the environment and mitigating the risk to an acceptable and reasonable level.
 
 Catalyze has a Sanction Policy that has sanctions for employees not adhering to certain policies, and for specifically violating HIPAA rules.
 
-Policies and procedures address the requirements of monitoring and logging system level events and actions taken by individuals within the environment. All requests into and out of the Catalyze network are logged, as well as all system events using Logstash. Catalyze, has implemented multiple logging and monitoring solutions to track events within their environment and to monitor for certain types of behavior. Additionally, proactive alerts are enabled and triggered based on certain suspicious activity.
+Policies and procedures address the requirements of monitoring and logging system level events and actions taken by individuals within the environment. All requests into and out of the Catalyze network are logged, as well as all system events. Catalyze, has implemented multiple logging and monitoring solutions to track events within their environment and to monitor for certain types of behavior. Log data is regularly reviewed. Additionally, proactive alerts are enabled and triggered based on certain suspicious activity.
 ```
 
 Standard | Description
@@ -34,9 +34,9 @@ Assigned Security Responsibility (Req) | Identify the security official who is r
 ##Workforce Security - 164.308(a)(3)(i)
 
 ```
-Catalyze, Inc. has policies in place that require workforce members requesting access to ePHI submit an authorization form that is signed and acknowledges their responsibility of safeguarding ePHI. The form must also be approved by the supervisor and customer. Once signed and approved, then the individual will be provisioned access to systems deemed business necessary. All Access to ePHI is based on minimum necessary requirements and least privilege. Catalyze cannot access ePHI unless customers explicitly grant access.
+Catalyze, Inc. has policies in place that require workforce members requesting access to ePHI to submit an authorization form that is signed and acknowledges their responsibility of safeguarding ePHI. The form must also be approved by the Security Officer. Once signed and approved, then the individual will be provisioned access to systems deemed business necessary. All Access to ePHI is based on minimum necessary requirements and least privilege. Catalyze cannot access ePHI unless customers explicitly grant access.
 
-Catalyze policies define the immediate removal of access once an employee has been terminated, with the Security Officer responsible for terminating the access. Once HR initiates the termination process the termination checklist is reference to ensure necessary actions are taken to remove systems and facilities access.
+Catalyze policies define the immediate removal of access once an employee has been terminated, with the Security Officer responsible for terminating the access. Once HR initiates the termination process the termination checklist is referenced to ensure necessary actions are taken to remove systems and facilities access.
 ```
 
 Standard | Description
@@ -50,9 +50,9 @@ Termination Procedures (A) | Implement procedures for terminating access to elec
 ```
 Catalyze, Inc. does not perform the functions of a Healthcare Clearinghouse so aspects of this section are not applicable.
 
-The security officer determines the roles necessary for each system and application. When access is needed to Catalyze infrastructure, a request and acknowledgement form is signed and then approved by the individualâ€™s supervisor. In the case of access to ePHI, customers must grant explicit access to Catalyze.
+The security officer determines the roles necessary for each system and application. When access is needed to Catalyze infrastructure, a request and acknowledgement form is signed and then approved by the Security Officer.
 
-Catalyze, Inc. has a formal process for requesting additional access to what employees are provisioned, and again Catalyze customers must approve all requests concerning ePHI.
+Catalyze has a formal process for requesting additional access to ePHI, and again Catalyze customers must approve all requests concerning ePHI.
 ```
 
 Standard | Description
@@ -66,11 +66,11 @@ Access Establishment and Modification (A) | Implement policies and procedures th
 ```
 Catalyze, Inc has a Security Awareness training policy in place that requires new employees and current employees to conduct training upon hire and annually thereafter. Minimum training is done annually, with regularly informal security and compliance traning done every other week.
 
-Catalyze, Inc. proactively assesses and tests for malicious software within their environment, both infrastructure and workstations.
+Catalyze proactively assesses and tests for malicious software within their environment, both infrastructure and workstations. Members of the Catalyze team monitor bug and vulnerability lists to assure they remain up to date.
 
-Catalyze, Inc. is monitoring and logging successful and unsuccessful log-in attempts to the servers within its environment and policies are in place requiring audit logging, which includes login attempts.
+Catalyze is monitoring and logging successful and unsuccessful log-in attempts to the servers within its environment and policies are in place requiring audit logging, which includes login attempts.
 
-Password configurations are set to require that passwords are a minimum of 7 character length, 90 day password expiration, account lockout after 5 invalid attempts, password history of last 4 passwords remembered, and account lockout after 15 minutes of inactivity.
+Password configurations are set to require that passwords are a minimum of 8 character length, 90 day password expiration, account lockout after 5 invalid attempts, password history of last 4 passwords remembered, and account lockout after 15 minutes of inactivity.
 ```
 
 Standard | Description
@@ -95,13 +95,13 @@ Response and Reporting (Req) | Identify and respond to suspected or known securi
 ```
 Catalyze, Inc has a formal Backup and Recovery Policy that defines the data backup strategy including: Schedule, associated responsibilities, and any risk-assessed exclusion to the backup schedule.
 
-Catalyze, Inc has a formal Disaster Recovery plan to ensure the efficient recovery of critical business data and systems in the event of a disaster. The DR plan includes specific technical procedures necessary to reinstate the infrastructure and data to allow critical business functions to continue business operations after a disaster has occurred. Additionally, the Catalyze DR plan includes requirements for performing annual testing of the DR plan to ensure its effectiveness.
+Catalyze has a formal Disaster Recovery plan to ensure the efficient recovery of critical business data and systems in the event of a disaster. The DR plan includes specific technical procedures necessary to reinstate the infrastructure and data to allow critical business functions to continue business operations after a disaster has occurred. Additionally, the Catalyze DR plan includes requirements for performing annual testing of the DR plan to ensure its effectiveness.
 
-Catalyze, Inc. has a Business Continuity Plan (BCP) to aid in the efficient recovery of critical business functions after a disaster has been declared. The BCP goes into effect after facility outage of 24 hours. The BCP identifies critical information necessary to resume business operations such as: Hardware/software requirements, recovery time objectives, forms, employee/vendor contact lists, alternate working procedures, emergency access procedures, and a data and application criticality analysis. The BCP includes an Emergency Mode Operations Plan that addresses the access and protection of ePHI while operating in emergency mode.
+Catalyze has a DR plan, or a a Business Continuity Plan (BCP), to aid in the efficient recovery of critical business functions after a disaster has been declared. The BCP goes into effect after facility outage of 24 hours. The BCP identifies critical information necessary to resume business operations such as: Hardware/software requirements, recovery time objectives, forms, employee/vendor contact lists, alternate working procedures, emergency access procedures, and a data and application criticality analysis. The BCP includes an Emergency Mode Operations Plan that addresses the access and protection of ePHI while operating in emergency mode.
 
 The DR and BPC plans are reviewed and tested annually or whenever significant infrastructure changes occur.
 
-Catalyze, Inc has a performed an applications and data criticality analysis that details what systems and application need be recovered and their specific order in the recovery process.
+Catalyze has a performed an applications and data criticality analysis that details what systems and application need be recovered and their specific order in the recovery process.
 ```
 
 Standard | Description
