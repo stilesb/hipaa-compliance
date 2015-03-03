@@ -8,8 +8,6 @@ gem "middleman-syntax"
 
 gem 'redcarpet', '~> 3.1.1'
 
-gem 'middleman-deploy', '~> 0.3.0'
-
 platforms :mri_18 do
   gem "ruby18_source_location"
 end

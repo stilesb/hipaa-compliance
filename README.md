@@ -1,18 +1,20 @@
 # Catalyze HIPAA Docs
 
+The Catalyze HIPAA Docs are a series of files outlining how Catalyze not only complies with HIPAA, but succeeds in building a better, more secure environment that assists companies in mitigating risk and proving compliance.
+
+We encourage contributions and adaption to this project. For guidelines on how to contribute please see the `CONTRIBUTING.md` file.
+
 ### Local Setup
 
-**Requirements**
+The core value of this repository is located in the form of markdown files. These can be found in: `/source/sections`. You can pull these files down and view them in any markdown editor ([mou](http://25.io/mou/), [sublime text plugin](https://github.com/revolunet/sublimetext-markdown-preview)). For viewing the files like you see [here](//hipaa.catalyze.io) please see the following instructions:
 
-- Ruby -v 1.9.3 or newer, *I highly recommend using [RVM](http://rvm.io/)*
-- Bundler, `sudo gem install bundler`
-- Middleman gem, `sudo gem install middleman`
-- Sass, `sudo gem install sass`
+**Running the site locally**
 
-**Setup**
+[hipaa.catalyze.io](//hipaa.catalyze.io) was built using [Middleman](//middlemanapp.com), a static site generator. To use middleman locally or on your website you'll first need to install Ruby and Ruby Gems. Once you have your ruby environment setup you can continue installing middleman:
 
-- Clone this repo, `git clone https://github.com/catalyzeio/catalyze-internal-wiki.git`
-- Navigate to this repo, `cd catalyze-internal-wiki`
-- Install gems, `bundle install` or `sudo bundle install` or if you have RVM simply run `bundle`
-- Run the server, `middleman`
-- View the site locally, `http://0.0.0.0:4567/`
+- Fork this repository
+- `git clone https://github.com/USERNAME/HIPAA.git`
+- `cd HIPAA`
+- `bundle install` or `bundle exec install`
+
+Once the previous commands have executed error free you can run the site locally using `middleman`. The site can be found here at `http://localhost:4567`. To build the static site you can run `middleman build`. This will output the assets and index file into the `build` directory. From here you can host the static files on your server. We do ask that you change the logo to your own and change brand colors where appropriate.
