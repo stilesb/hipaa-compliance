@@ -11,7 +11,7 @@ Policies and Procedures (Req) | Implement reasonable and appropriate policies an
 ##Documentation - 164.316(b)(1)(i)
 
 ```
-Catalyze retains the necessary policies and documentation for a minimum of 6 years. All policies and procedures are available and distributed to personnel on the company shared drive (curently Box). Catalyze has an update and review process for reviewing all policies and procedures and updating them as necessary. Additionally, Catalyze tracks and maintains revision history, approval signature, and timestamps to ensure policies are reviewed and updated according to organization requirements.
+Catalyze retains the necessary policies and documentation for a minimum of 6 years. All policies and procedures are available and distributed to personnel on the company shared drive (currently Box). Catalyze has an update and review process for reviewing all policies and procedures and updating them as necessary. Additionally, Catalyze tracks and maintains revision history, approval signature, and timestamps to ensure policies are reviewed and updated according to organization requirements.
 ```
 Standard | Description
 --------- | -----------

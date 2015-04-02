@@ -42,7 +42,7 @@ Workstation Security (Req) | Implement physical safeguards for all workstations 
 ##Device and Media Controls - 164.310(d)(1)
 
 ```
-Catalyze has polcies and procedures for all workstations that interact with and may potentially become exposed to ePHI. These policies have requirements for secure media disposal so that ePHI cannot be recovered from these systems.
+Catalyze has policies and procedures for all workstations that interact with and may potentially become exposed to ePHI. These policies have requirements for secure media disposal so that ePHI cannot be recovered from these systems.
 
 Catalyze has Media Re-use requirements for the workstations, despite the fact that these workstations do not have access to and interaction with ePHI.
 ```
@@ -56,7 +56,7 @@ Data Backup and Storage (A) | Create a retrievable, exact copy of electronic pro
 
 ##Technical Safeguards (see <a href="http://www.hhs.gov/ocr/privacy/hipaa/administrative/securityrule/techsafeguards.pdf">164.312</a>)
 
-This section of HIPAA outlines *the technology and the policy and procedures for its use that protect electronic protected health information and control access to it.* It is important to note that these requirements are not presecriptive, and there is flexibility in implementation. The key is that measures that are reasonabale and appropriate are implemented to safegaurd ePHI.
+This section of HIPAA outlines *the technology and the policy and procedures for its use that protect electronic protected health information and control access to it.* It is important to note that these requirements are not prescriptive, and there is flexibility in implementation. The key is that measures that are reasonable and appropriate are implemented to safeguard ePHI.
 
 ##Access Control - 164.312(a)(1)
 

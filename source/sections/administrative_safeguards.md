@@ -64,7 +64,7 @@ Access Establishment and Modification (A) | Implement policies and procedures th
 ##Security Awareness and Training - 164.308(a)(5)(i)
 
 ```
-Catalyze, Inc has a Security Awareness training policy in place that requires new employees and current employees to conduct training upon hire and annually thereafter. Minimum training is done annually, with regularly informal security and compliance traning done every other week.
+Catalyze, Inc has a Security Awareness training policy in place that requires new employees and current employees to conduct training upon hire and annually thereafter. Minimum training is done annually, with regularly informal security and compliance training done every other week.
 
 Catalyze proactively assesses and tests for malicious software within their environment, both infrastructure and workstations. Members of the Catalyze team monitor bug and vulnerability lists to assure they remain up to date.
 
@@ -125,7 +125,7 @@ Evaluation (Req) | Perform a periodic technical and non-technical evaluation, ba
 ##Business Associate Contracts and Other Arrangement - 164.308(b)(1)
 
 ```
-Catalyze, Inc. has a formalized template, as well as policies in place regarding Business Associate Agreements and written contracts. Catalyze has engaged a third part provider for hosting responsibilities and has written attestations of safeguarding its data. Additionally, Catalyze performs due diligence in assuring that third party providers they select go through their due diligence process and provide services consistent with Catalye's security and compliance posture.
+Catalyze, Inc. has a formalized template, as well as policies in place regarding Business Associate Agreements and written contracts. Catalyze has engaged a third part provider for hosting responsibilities and has written attestations of safeguarding its data. Additionally, Catalyze performs due diligence in assuring that third party providers they select go through their due diligence process and provide services consistent with Catalyze's security and compliance posture.
 ```
 
 Standard | Description
