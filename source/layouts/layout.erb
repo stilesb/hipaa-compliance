@@ -4,12 +4,12 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<!-- Set title to current page title -->
-		<title><%= current_page.data.title || "Catalyze Engineering Blog" %></title>
-		<meta name="description" content="Catalyze Engineering Blog">
+		<title><%= current_page.data.title || "Catalyze HIPAA Compliance" %></title>
+		<meta name="description" content="Catalyze HIPAA Compliance">
 		<!-- Set keyword content to current post keywords data -->
 		<meta name="keywords" content="<%= current_page.data.keywords %>">
 		<meta property="og:description" content="<%= current_page.data.summary %>">
-		<meta property="og:title" content="Catalyze Engineering Blog" />
+		<meta property="og:title" content="Catalyze HIPAA Compliance" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://engineering.catalyze.io" />
 		<meta property="og:image" content="/assets/img/logo.png" />
@@ -23,41 +23,21 @@
 		<link href="//fhir.catalyze.io/favicon-54db3de7.png" rel="icon" type="image/png" />
 		<%= partial "partials/ga" %>
 		<%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", "styles", "syntax" %>
-		<%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
 	</head>
 	<body class="<%= page_classes %>">
-		<%= partial "partials/main-left" %>
-		<div class="main-posts">
-			<% blog.articles[0...10].each do |article| %>
-			<div class="post">
-				<header>
-					<h1 class="title">
-					<a href="<%= article.url %>">
-						<%= article.title %>
-					</a>
-					</h1>
-					<div class="meta">
-						<ul class="tags">
-							<li><%= article.data.tags %></li>
-						</ul>
-						<div class="date"><%= article.data.date %></div>
-					</div>
-					<div class="author">
-						<div class="prof">
-							<img src="/assets/img/profiles/prof-<%= article.data.author %>.png">
-							<span class="main">
-								<%= article.data.author_full %>
-							</span>
-						</div>
-						<span class="guest">
-							<span id="guest-author"><%= article.data.author_alt %></span>
-						</span>
-					</div>
-				</header>
-				<%= article.summary %>
-			</div>
-			<% end %>
+		<div class="fixed-bar"></div>
+		<%= partial "partials/header" %>
+		<div class="cf grid">
+			<%= partial "partials/menu" %>
+			<section class="content">
+				<% current_page.data.sections && current_page.data.sections.each do |include| %>
+					<%= partial "sections/#{include}" %>
+				<% end %>
+				<%= yield %>
+			</section>
 		</div>
-		<%= javascript_include_tag "//fast.fonts.net/jsapi/06d49100-622b-4a4b-9a27-92dce71d35c3.js", "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", "main" %>
+		<div class="stamp"><img src="/assets/img/stamp.gif" alt="Stamp"></div>
+		<%= partial "partials/product-navigation" %>
+		<%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", "all" %>
 	</body>
 </html>

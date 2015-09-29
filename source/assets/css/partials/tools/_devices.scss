@@ -1,41 +1,28 @@
-@media handheld, only screen and (max-width: 1321px){
-	.main-left{
-		.main-header{
-			.tag{
-				margin-top: 13px;
-				max-width: 150px;
-			}
+@media handheld, only screen and (max-width: 1160px){
+	.content{margin-left: 27%;}
+	.sub-header{a.up-next{margin-left: 85px;}}
+}
+@media handheld, only screen and (max-width: 970px){
+	.menu{width: 24%;}
+	.sub-header{a.up-next{margin-left: 55px;}}
+	.stamp{display: none;}
+}
+@media handheld, only screen and (max-width: 820px){
+	.menu{
+		width: 220px;
+		background-color: #fff;
+		z-index: 2;
+		left: -220px;
+		ul{
+			&:first-of-type{@include easing(250ms);margin: 0px 0px 0px 0px;}
 		}
-		nav{
-			position: relative;
-			width: 100%;
-			a{
-				display: block;
-				margin: 0px 0px 10px 0px;
-				padding: 0px 0px 10px 0px;
-				border-bottom: 1px dotted rgba(255,255,255,0.3);
-			}
+		.device-controls{
+			display: block;
+			span.hide-menu{display: none;}
 		}
 	}
-}
-@media handheld, only screen and (max-width: 1100px){
-	.main-left{
-		.main-header{.tag{display: none;visibility: hidden;}}
-	}
-}
-@media handheld, only screen and (max-width: 951px){
-	.popular-posts{display: none;visibility: hidden;}
-}
-@media handheld, only screen and (max-width: 911px){
-	.main-left{
-		.main-header{padding: 10px;.logo{max-width: 95px;}}
-		nav{padding: 10px;}
-	}
-	.intro{
-		margin: 10px;
-		padding: 10px;
-		p{font-size: 12px;}
-	}
+	.content{margin-left: auto;padding-left: 20px;}
+	.sub-header{a.up-next{margin-left: 10px;}}
 }
 @media handheld, only screen and (max-width: 767px){
 	.grid{
@@ -57,38 +44,91 @@
 		padding-right: 20px;
 	}
 }
-@media handheld, only screen and (max-width: 601px){
-	.main-posts{
-		.post{
-			h1.title{font-size: 25px;}
-			.meta{
-				.tags{float: none;}
-				.date{float: none;padding: 20px 0px 0px 0px;}
+@media handheld, only screen and (max-width: 650px){
+	.main-header{
+		nav{
+			margin-top: 5px;
+			a{
+				margin: 0px 0px 0px 10px;
+				font-size: 12px;
 			}
+			a.cta{padding: 5px;}
 		}
 	}
-	.blog-left{
-		border-bottom: 1px solid #ccc;
-		.main-header{border-bottom: 0px;}
+	.sub-header{
+		.search{
+			float: none;
+			margin: 20px 0px 0px 0px;
+			input[type="text"]{
+				width: 100%;
+			}
+		}
+		h1.site-title{display: inline-block;float: none;}
+		a.up-next{
+			padding: 5px 0px;
+			margin: 0px;
+			display: inline-block;
+			float: none;
+		}
+	}
+	.product-navigation{
+		span.quote{display: none;}
+	}
+}
+@media handheld, only screen and (max-width: 580px){
+	.product-navigation{
+		a{padding: 5px;font-size: 40px;}
+		.right{display: none;}
+		.span-right{display: none;}
+		.span-left{padding: 22px 0px 0px 10px;}
+	}
+}
+@media handheld, only screen and (max-width: 520px){
+	.main-header{
+		padding: 0px;
+		.logo{
+			float: none;
+			padding: 10px;
+		}
 		nav{
+			padding: 10px;
+			background-color: #fff;
+			border-top: 1px solid $c_border;
+			float: none;
 			a{
-				border-bottom: 1px solid #ccc;
-				&:last-of-type{
-					margin-bottom: 0px;
-					padding-bottom: 0px;
-					border-bottom: 0px;
+				margin: 0px 0px 10px 0px;
+				display: block;
+				&:last-of-type{margin-bottom: 0px;}
+			}
+			a.cta{
+				background-color: transparent;
+				padding: 0px;
+				color: $c_good;
+				&:hover{
+					background-color: transparent;
+					color: $c_header;
 				}
 			}
 		}
 	}
-	.main-left{.main-header{border-bottom: 1px solid darken($c_brand, 10%);}.intro{display: none;}}
+	.content{
+		h2,
+		h1{
+			line-height: 1.5;
+			&:after{
+				color: transparent;
+				background-color: transparent;
+				border: 1px solid transparent;
+				content: " ";
+			}
+		}
+		h2{
+			&:after{content: " ";}
+		}
+	}
 }
-@media handheld, only screen and (max-width: 521px){
-	.main-posts{padding: 10px;width: 100%;margin-left: 0px;}
-	.main-left{
-		position: relative;
-		width: 100%;
-		min-width: 100%;
-		max-width: 100%;
+@media handheld, only screen and (max-width: 430px){
+	.sub-header{
+		h1.site-title{display: none;}
 	}
 }
