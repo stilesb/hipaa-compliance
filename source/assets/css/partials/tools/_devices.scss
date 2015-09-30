@@ -8,8 +8,10 @@
 	.stamp{display: none;}
 }
 @media handheld, only screen and (max-width: 820px){
+	.main-header{padding: 46px 15px 15px 15px;}
 	.menu{
 		width: 220px;
+		top: 36px;
 		background-color: #fff;
 		z-index: 2;
 		left: -220px;
@@ -88,7 +90,7 @@
 		padding: 0px;
 		.logo{
 			float: none;
-			padding: 10px;
+			padding: 46px 10px 10px 10px;
 		}
 		nav{
 			padding: 10px;
@@ -104,6 +106,7 @@
 				background-color: transparent;
 				padding: 0px;
 				color: $c_good;
+				border: 0px;
 				&:hover{
 					background-color: transparent;
 					color: $c_header;

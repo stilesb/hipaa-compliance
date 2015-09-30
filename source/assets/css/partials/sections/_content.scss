@@ -103,13 +103,14 @@ body{margin: 5px 0px 0px 0px;}
 		}
 		a.cta{
 			padding: 10px;
-			color: #fff;
-			background-color: $c_good;
+			color: $c_brand;
+			// background-color: $c_good;
+			border: 1px solid $c_brand;
 			@include border-radius(5px);
 			@include easing(350ms);
 			&:hover{
 				@include easing(350ms);
-				background-color: darken($c_good, 10%);
+				background-color: lighten($c_brand, 45%);
 			}
 		}
 	}
@@ -175,7 +176,10 @@ body{margin: 5px 0px 0px 0px;}
 		position: fixed;
 		font-size: 14px;
 		z-index: 3;
-		bottom: 60px;
+		top: 10px;
+		left: 0px;
+		right: 0px;
+		width: 100%;
 		font-size: 14px;
 		font-weight: 600;
 		color: #fff;
@@ -183,9 +187,14 @@ body{margin: 5px 0px 0px 0px;}
 		left: 0px;
 		span.show-menu{
 			color: $c_brand;
-			border-top: 1px solid $c_brand;
-			border-right: 1px solid $c_brand;
+			border-bottom: 1px solid $c_brand;
 			padding: 8px;
+			position: fixed;
+			top: 5px;
+			text-align: center;
+			left: 0px;
+			right: 0px;
+			width: 100%;
 			background-color: #fff;
 		}
 		span.hide-menu{
@@ -196,8 +205,8 @@ body{margin: 5px 0px 0px 0px;}
 		&:first-of-type{@include easing(250ms);margin: 135px 0px 0px 0px;}
 		li{margin: 5px 0px;}
 		ul{
-			&:first-of-type{@include easing(0ms);margin-top: 0px;margin-left: 20%;}
-			margin-left: 20%;
+			&:first-of-type{@include easing(0ms);margin-top: 0px;margin-left: 10%;}
+			margin-left: 10%;
 			background-color: $c_bg;
 			padding: 10px;
 			border-left: 2px solid $c_brand;
@@ -257,14 +266,53 @@ body{margin: 5px 0px 0px 0px;}
 		}
 	}
 	h2{
-		font-size: 18px;
+		font-size: 16px;
+		font-weight: 500;
+		color: $c_header;
 		&:after{content: "SUB SECTION";}
+	}
+	strong{font-family: $f_serif;font-weight:600;color: $c_header;}
+	em{font-family: $f_serif; font-style: italic;}
+	img{max-width: 100%;height: auto;display: block;margin: 0px 0px 20px 0px;}
+	h3{
+		padding: 0px 0px 20px 0px;
+		color: $c_header;
+		font-size: 14px;
+		font-weight: 500;
+	}
+	ul{
+		padding: 0px 0px 20px 20px;
+		list-style: square;
+		li{
+			margin: 0px 0px 10px 0px;
+			line-height: 2;
+			font-size: 14px;
+			color: $c_text;
+		}
+	}
+	blockquote{
+		background-color: $c_bg;
+		border-left: 2px solid $c_brand;
+		margin: 0px 0px 20px 0px;
+		padding: 10px 10px 10px 20px;
+		p{
+			padding: 0px;
+			font-style: italic;
+		}
+	}
+	hr{
+		display: block;
+		height: 1px;
+		border: 0;
+		border-top: 1px solid $c_border;
+		padding: 0;
 	}
 	p{
 		padding: 0px 0px 20px 0px;
 		color: $c_text;
-		font-size: 12px;
-		line-height: 1.5;
+		font-size: 14px;
+		line-height: 2;
+		font-family: $f_serif;
 		a{
 			@include easing(350ms);
 			color: $c_brand;
