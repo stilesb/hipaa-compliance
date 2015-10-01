@@ -104,7 +104,6 @@ body{margin: 5px 0px 0px 0px;}
 		a.cta{
 			padding: 10px;
 			color: $c_brand;
-			// background-color: $c_good;
 			border: 1px solid $c_brand;
 			@include border-radius(5px);
 			@include easing(350ms);
@@ -139,6 +138,7 @@ body{margin: 5px 0px 0px 0px;}
 	.search{
 		position: relative;
 		float: right;
+		z-index: 98;
 		.icon{
 			max-width: 18px;
 			height: auto;
@@ -162,6 +162,54 @@ body{margin: 5px 0px 0px 0px;}
 		}
 	}
 }
+.search-results{
+	display: none;
+	z-index: 99;
+	background-color: #fff;
+	margin: 20px 20px 0px 33.33%;
+	border: 1px solid $c_border;
+	padding: 5px 5px 5px 10px;
+	@include border-radius(5px);
+	@include box-shadow(0px 0px 10px $c_border);
+	li{
+		color: $c_text;
+		a{
+			text-decoration: none;
+			color: $c_brand;
+			display: block;
+			line-height: 2;
+			position: relative;
+			border-bottom: 1px dotted $c_border;
+			@include easing(350ms);
+			&:hover{
+				@include easing(350ms);
+				padding-left: 10px;
+				&:after{
+					@include easing(350ms);
+					right: 20px;
+				}
+			}
+			&:after{
+				@include easing(350ms);
+				content: " ";
+				position: absolute;
+				right: 5px;
+				top: 12px;
+				font-size: 12px;
+				line-height: 1;
+				background-color: $c_brand;
+				color: #fff;
+				height: 5px;
+				width: 5px;
+				@include border-radius(20px);
+			}
+		}
+		&:last-of-type{
+			a{border-bottom: 0px;}
+		}
+	}
+}
+.search-results.visible{display: block;}
 // Menu
 .menu{
 	padding: 10px 20px 10px 0px;
@@ -169,38 +217,9 @@ body{margin: 5px 0px 0px 0px;}
 	position: fixed;
 	z-index: 1;
 	top: 0px;
+	bottom: 0px;
 	width: 20.80%;
 	box-shadow: 8px 0px 10px -7px $c_border;
-	.device-controls{
-		display: none;
-		position: fixed;
-		font-size: 14px;
-		z-index: 3;
-		top: 10px;
-		left: 0px;
-		right: 0px;
-		width: 100%;
-		font-size: 14px;
-		font-weight: 600;
-		color: #fff;
-		cursor: pointer;
-		left: 0px;
-		span.show-menu{
-			color: $c_brand;
-			border-bottom: 1px solid $c_brand;
-			padding: 8px;
-			position: fixed;
-			top: 5px;
-			text-align: center;
-			left: 0px;
-			right: 0px;
-			width: 100%;
-			background-color: #fff;
-		}
-		span.hide-menu{
-			@extend span.show-menu;
-		}
-	}
 	ul{
 		&:first-of-type{@include easing(250ms);margin: 135px 0px 0px 0px;}
 		li{margin: 5px 0px;}
@@ -225,7 +244,7 @@ body{margin: 5px 0px 0px 0px;}
 		&:first-of-type{margin: 20px 0px 0px 0px;}
 	}
 	a{
-		padding: 10px;
+		padding: 6px;
 		font-size: 13px;
 		display: block;
 		text-decoration: none;
@@ -241,10 +260,41 @@ body{margin: 5px 0px 0px 0px;}
 	}
 	li.tocify-focus{a{color: $c_brand;}}
 }
+.device-controls{
+	@extend .cf;
+	display: none;
+	position: fixed;
+	font-size: 14px;
+	z-index: 3;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+	cursor: pointer;
+	left: 0px;
+	span.show-menu{
+		color: #fff;
+		@include background-gradient(lighten($c_brand, 10%), $c_brand);
+		padding: 8px;
+		position: fixed;
+		top: 0px;
+		text-align: center;
+		left: 0px;
+		right: 0px;
+		width: 100%;
+	}
+	span.hide-menu{
+		@extend span.show-menu;
+	}
+}
 // Content
 .content{
 	padding: 20px 20px 60px 0px;
 	margin-left: 33.33%;
+	.search-highlight{background-color: $c_search;}
 	h2,
 	h1{
 		font-size: 24px;

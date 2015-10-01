@@ -1,4 +1,5 @@
 @media handheld, only screen and (max-width: 1160px){
+	.search-results,
 	.content{margin-left: 27%;}
 	.sub-header{a.up-next{margin-left: 85px;}}
 }
@@ -11,18 +12,20 @@
 	.main-header{padding: 46px 15px 15px 15px;}
 	.menu{
 		width: 220px;
-		top: 36px;
+		top: 31px;
 		background-color: #fff;
-		z-index: 2;
+		z-index: 99;
 		left: -220px;
 		ul{
 			&:first-of-type{@include easing(250ms);margin: 0px 0px 0px 0px;}
 		}
-		.device-controls{
-			display: block;
-			span.hide-menu{display: none;}
-		}
 	}
+	.device-controls{
+		display: block;
+		z-index: 99;
+		span.hide-menu{display: none;}
+	}
+	.search-results{margin-left: 20px;}
 	.content{margin-left: auto;padding-left: 20px;}
 	.sub-header{a.up-next{margin-left: 10px;}}
 }
@@ -60,7 +63,8 @@
 	.sub-header{
 		.search{
 			float: none;
-			margin: 20px 0px 0px 0px;
+			margin: 5px 0px 0px 0px;
+			span.icon{display: none;}
 			input[type="text"]{
 				width: 100%;
 			}
@@ -98,19 +102,26 @@
 			border-top: 1px solid $c_border;
 			float: none;
 			a{
-				margin: 0px 0px 10px 0px;
+				background-image: linear-gradient(-180deg, #E7ECEE 0%, #D4DEE5 100%);
+				border: 1px solid #8FABC1;
+				box-shadow: inset 1px 1px 1px 0px #F6FBFF;
+				padding: 3px 5px;
+				@include border-radius(5px);
+				color: #6C8FAD;
+				margin: 0px 0px 5px 0px;
 				display: block;
 				&:last-of-type{margin-bottom: 0px;}
 			}
 			a.cta{
-				background-color: transparent;
-				padding: 0px;
-				color: $c_good;
-				border: 0px;
-				&:hover{
-					background-color: transparent;
-					color: $c_header;
-				}
+				background-image: linear-gradient(-180deg, #E7ECEE 0%, #D4DEE5 100%);
+				border: 1px solid #8FABC1;
+				box-shadow: inset 1px 1px 1px 0px #F6FBFF;
+				padding: 3px 5px;
+				@include border-radius(5px);
+				color: #6C8FAD;
+				margin: 0px 0px 5px 0px;
+				display: block;
+				&:last-of-type{margin-bottom: 0px;}
 			}
 		}
 	}
@@ -129,6 +140,7 @@
 			&:after{content: " ";}
 		}
 	}
+	.menu{}
 }
 @media handheld, only screen and (max-width: 430px){
 	.sub-header{
