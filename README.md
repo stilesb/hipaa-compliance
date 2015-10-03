@@ -4,8 +4,8 @@
 
 The Catalyze HIPAA Docs exist to outline the ways Catalyze, Inc. complies with HIPAA. These docs have been open sourced in order to help the health IT community grow and improve patient care through secure, usable software.
 
-- The license for these docs can be found [here](..)
-- The contributing guidelines can be found [here](..)
+- The license for these docs can be found [here](https://github.com/catalyzeio/HIPAA/blob/master/LICENSE.md%20)
+- The contributing guidelines can be found [here](https://github.com/catalyzeio/HIPAA/blob/master/CONTRIBUTING.md)
 
 # Getting Started
 
