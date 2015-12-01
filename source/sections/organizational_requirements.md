@@ -4,10 +4,12 @@ These requirements simply outline the need for business associate agreements (BA
 
 ##Business Associate Contracts or Other Arrangements - 164.314(a)(1)(i)
 
-```
-Catalyze has a formalized policy and process is in place concerning BAAâ€™s. BAA templates are in place and BA contracts are reviewed for consistency. All paying customers on Catalyze have BAAs in place. Catalyze has a formal policy and process in place for performing due diligence with any third party or vendor before engaging them. Additionally, contracts are retained that detail the responsibility of safeguarding any information to which the provider may have access, as well as creating consistency for Catalyze and Catalyze customers.
-```
 Standard | Description
 --------- | -----------
 Business Associate Contracts (Req) | The Implementation Specifications for the HIPAA Security Rule Organizational Requirements "Business Associate Contracts or Other Arrangements" standard were evaluated under section 164.308(b)(1) above.
 Other Arrangements (Req) | Rules to engaging with additional 3rd parties, like subcontractors.
+
+
+```
+Catalyze has a formalized policy and process is in place concerning BAAs. BAA templates are in place and BA contracts are reviewed for consistency. All paying customers on Catalyze have BAAs in place. Catalyze has a formal policy and process in place for performing due diligence with any third party or vendor before engaging them. Additionally, contracts are retained that detail the responsibility of safeguarding any information to which the provider may have access, as well as creating consistency for Catalyze and Catalyze customers.
+```

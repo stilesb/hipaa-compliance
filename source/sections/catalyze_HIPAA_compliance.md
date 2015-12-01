@@ -9,14 +9,14 @@ Need | Catalyze Approach
 Encryption  | All data is encrypted in transit, end to end, and at rest. Log data is also encrypted to mitigate risk of ePHI stored in log files.
 Minimum Necessary Access | Access controls are always defaulted to no access unless overrided manually.
 System Access Tracking | All access requests and changes of access, as well as approvals, are tracked and retained.
-PHI Segmentation | All customer data is segmented. Additionally, all platform customers have unique IP spaces for additional network segmentation.
+PHI Segmentation | All customer data is segmented. Additionally, all platform customers have a dedicated overlay network (subnet) for additional network segmentation.
 Monitoring | All network requests, successful and unsuccessful, are logged, along with all system logs. API PHI requests (GET, POST, PUT, DELETE) log the requestor, location, and data changed/viewed. Additionally, alerts are proactively sent based on suspicious activity. OSSEC is used for IDS and file integrity monitoring.
 Auditing | All log data is encrypted and unified, enabling secure access to full historical network activity records.
 Minimum Risk to Architecture | Secure, encrypted access is the only form of public access enabled to servers. All API access must first pass through Catalyze firewalls. To gain full access to Catalyze systems, users must login via 2 factor authentication through VPN, authenticate to the specific system as a regular user, and upgrade privileges on the systems temporarily as needed.
 Vulnerability Scanning | All customer and internal networks are scanned regularly for vulnerabilities.
 Intrusion Detection | All production systems have intrusion detection software running to proactively detect anomalies.
-Backup | All customer data is backed up every 24 hours.
-Disaster Recovery | Catalyze has an audited and regularly tested disaster recovery plan. This plan applies to customers, and they inherit this from us.
+Backup | All customer data is backed up every 24 hours. Seven (7) days of rolling backups are retained.
+Disaster Recovery | Catalyze has an audited and regularly tested disaster recovery plan. This plan also applies to customers, and they inherit this from us.
 Documentation | All documentation (policies and procedures that make up our security and compliance program) is stored and versioned using GitHub, and published [here](https://catalyze.io/policy/).
 Risk Management | We proactively perform risk assessments to assure changes to our infrastructure do not expose new risks to ePHI. Risks mitigation is done before changes are pushed to production.
 Workforce Training | Despite not having access to the ePHI of our customers, all Catalyze workforce members undergo HIPAA and security training regularly. Current training is hosted [here](https://training.catalyze.io/).
