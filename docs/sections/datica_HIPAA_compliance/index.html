@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!-- Set title to current page title -->
+        <title>Datica HIPAA Docs</title>
+        <meta name="description" content="Our company is built with information security and compliance at its core. Our policies, procedures, and technology go above and beyond HIPAA compliance to ensure our users' data, and their users' data, is secure. We take HIPAA compliance seriously because we believe it is the right thing to do.">
+        <!-- Set keyword content to current post keywords data -->
+        <meta name="keywords" content="HIPAA, Security, Compliance, Software, Infrastructure, Documentation">
+        <meta property="og:description" content="Our company is built with information security and compliance at its core. Our policies, procedures, and technology go above and beyond HIPAA compliance to ensure our users' data, and their users' data, is secure. We take HIPAA compliance seriously because we believe it is the right thing to do.">
+        <meta property="og:title" content="Datica HIPAA Compliance" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hipaa.datica.com" />
+        <meta property="og:image" content="/assets/img/logo-82059043.svg" />
+        <meta property="og:locale" content="en_US">
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:site" content="@daticahealth" />
+        <meta property="twitter:title" content="Datica HIPAA Docs" />
+        <meta property="twitter:description" content="Our company is built with information security and compliance at its core. Our policies, procedures, and technology go above and beyond HIPAA compliance to ensure our users' data, and their users' data, is secure. We take HIPAA compliance seriously because we believe it is the right thing to do." />
+        <meta property="twitter:image" content="/assets/img/logo-82059043.svg" />
+        <!-- Icons -->
+        <link href="/assets/img/favicon.ico" rel="icon" type="image/png" />
+        <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon-72209faa.png">
+        <script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-60319203-2', 'auto');
+	ga('send', 'pageview');
+</script>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="/assets/css/styles-30cf9c38.css" rel="stylesheet" type="text/css" /><link href="/assets/css/syntax-121a3666.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body class="sections sections_datica_HIPAA_compliance sections_datica_HIPAA_compliance_index">
+        <div class="fixed-bar"></div>
+        <header class="main-header">
+    <div class="grid">
+        <div class="logo"><img src="/assets/img/logo-82059043.svg" alt="Datica Logo"></div>
+        <nav>
+            <a href="//datica.com">Datica Home</a>
+            <a href="//datica.com/about-us">About</a>
+        </nav>
+    </div>
+</header>
+<header class="sub-header">
+    <div class="grid">
+        <h1 class="site-title">Datica Compliance</h1>
+        <a class="up-next" href="/#/">&gt; HIPAA Docs</a>
+    </div>
+</header>
+<div class="grid">
+    <ul class="search-results"></ul>
+</div>
+
+        <div class="cf grid">
+            <aside class="menu">
+	<div id="toc"></div>
+</aside>
+<div class="device-controls">
+	<span class="hide-menu">CLOSE</span>
+	<span class="show-menu">MENU</span>
+</div>
+            <section class="content">
+                <h1 id="datica-hipaa-compliance">Datica HIPAA Compliance</h1>
+
+<p>Learn how Datica not only complies with HIPAA, but builds a better, more secure environment to mitigate your risk and help you prove compliance with HIPAA. We did the hard work so you don&rsquo;t have to. And you can inherit a lot of the work that we&rsquo;ve done in terms of audits. Our HIPAA compliant API, platform, and data integration service simplify compliance for you. To learn more about our products or to get setup with an account today, check out our <a href="https://datica.com/compliant-cloud">Compliant Cloud</a> and <a href="https://datica.com/managed-integration">Managed Integration</a>.</p>
+
+<p>In an effort to be transparent, we go into a good amount detail on this page. As a lead in, below is a high level summary our major architecture, our guiding principles, and how it maximizes our security posture.</p>
+
+<table><thead>
+<tr>
+<th>Need</th>
+<th>Datica Approach</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Encryption</td>
+<td>All data is encrypted in transit, end to end, and at rest. Log data is also encrypted to mitigate risk of ePHI stored in log files.</td>
+</tr>
+<tr>
+<td>Minimum Necessary Access</td>
+<td>Access controls are always defaulted to no access unless overrided manually.</td>
+</tr>
+<tr>
+<td>System Access Tracking</td>
+<td>All access requests and changes of access, as well as approvals, are tracked and retained.</td>
+</tr>
+<tr>
+<td>PHI Segmentation</td>
+<td>All customer data is segmented. Additionally, all platform customers have a dedicated overlay network (subnet) for additional network segmentation.</td>
+</tr>
+<tr>
+<td>Monitoring</td>
+<td>All network requests, successful and unsuccessful, are logged, along with all system logs. API PHI requests (GET, POST, PUT, DELETE) log the requestor, location, and data changed/viewed. Additionally, alerts are proactively sent based on suspicious activity. OSSEC is used for IDS and file integrity monitoring.</td>
+</tr>
+<tr>
+<td>Auditing</td>
+<td>All log data is encrypted and unified, enabling secure access to full historical network activity records.</td>
+</tr>
+<tr>
+<td>Minimum Risk to Architecture</td>
+<td>Secure, encrypted access is the only form of public access enabled to servers. All API access must first pass through Datica firewalls. To gain full access to Datica systems, users must login via 2 factor authentication through VPN, authenticate to the specific system as a regular user, and upgrade privileges on the systems temporarily as needed.</td>
+</tr>
+<tr>
+<td>Vulnerability Scanning</td>
+<td>All customer and internal networks are scanned regularly for vulnerabilities.</td>
+</tr>
+<tr>
+<td>Intrusion Detection</td>
+<td>All production systems have intrusion detection software running to proactively detect anomalies.</td>
+</tr>
+<tr>
+<td>Backup</td>
+<td>All customer data is backed up every 24 hours. Seven (7) days of rolling backups are retained.</td>
+</tr>
+<tr>
+<td>Disaster Recovery</td>
+<td>Datica has an audited and regularly tested disaster recovery plan. This plan also applies to customers, and they inherit this from us.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>All documentation (policies and procedures that make up our security and compliance program) is stored and versioned using GitHub, and published <a href="https://poliyc.datica.com">here</a>.</td>
+</tr>
+<tr>
+<td>Risk Management</td>
+<td>We proactively perform risk assessments to assure changes to our infrastructure do not expose new risks to ePHI. Risks mitigation is done before changes are pushed to production.</td>
+</tr>
+<tr>
+<td>Workforce Training</td>
+<td>Despite not having access to the ePHI of our customers, all Datica workforce members undergo HIPAA and security training regularly. Current training is hosted <a href="https://training.datica.com/">here</a>.</td>
+</tr>
+</tbody></table>
+
+<p>See the finer grain details of how we comply with HIPAA below. These are mapped to specific HIPAA rules. There&rsquo;s a lot here but again, we are taking this responsibility on so that our customers don&rsquo;t have to. Controls marked with an (Req) are <em>Required</em>. Controls marked with an (A) are <em>Addressable</em>. In our environment, controls outlined below are implemented on all infrastructure that processes, stores, transmits or can otherwise gain access to ePHI (electronic protected health information). If have questions, please <a href="mailto:hello@datica.com">email us</a>.</p>
+
+            </section>
+        </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script><script src="/assets/js/all-be410877.js" type="text/javascript"></script>
+    </body>
+</html>

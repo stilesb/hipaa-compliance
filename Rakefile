@@ -6,7 +6,7 @@ end
 
 desc "Run the middleman server"
 task :run do
-  system("middleman server -p 2113")
+  system("middleman server -p 2115")
 end
 
 desc "Watch and compress Sass"

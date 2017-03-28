@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!-- Set title to current page title -->
+        <title>Datica HIPAA Docs</title>
+        <meta name="description" content="Our company is built with information security and compliance at its core. Our policies, procedures, and technology go above and beyond HIPAA compliance to ensure our users' data, and their users' data, is secure. We take HIPAA compliance seriously because we believe it is the right thing to do.">
+        <!-- Set keyword content to current post keywords data -->
+        <meta name="keywords" content="HIPAA, Security, Compliance, Software, Infrastructure, Documentation">
+        <meta property="og:description" content="Our company is built with information security and compliance at its core. Our policies, procedures, and technology go above and beyond HIPAA compliance to ensure our users' data, and their users' data, is secure. We take HIPAA compliance seriously because we believe it is the right thing to do.">
+        <meta property="og:title" content="Datica HIPAA Compliance" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hipaa.datica.com" />
+        <meta property="og:image" content="/assets/img/logo-82059043.svg" />
+        <meta property="og:locale" content="en_US">
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:site" content="@daticahealth" />
+        <meta property="twitter:title" content="Datica HIPAA Docs" />
+        <meta property="twitter:description" content="Our company is built with information security and compliance at its core. Our policies, procedures, and technology go above and beyond HIPAA compliance to ensure our users' data, and their users' data, is secure. We take HIPAA compliance seriously because we believe it is the right thing to do." />
+        <meta property="twitter:image" content="/assets/img/logo-82059043.svg" />
+        <!-- Icons -->
+        <link href="/assets/img/favicon.ico" rel="icon" type="image/png" />
+        <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon-72209faa.png">
+        <script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-60319203-2', 'auto');
+	ga('send', 'pageview');
+</script>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" /><link href="/assets/css/styles-30cf9c38.css" rel="stylesheet" type="text/css" /><link href="/assets/css/syntax-121a3666.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body class="index">
+        <div class="fixed-bar"></div>
+        <header class="main-header">
+    <div class="grid">
+        <div class="logo"><img src="/assets/img/logo-82059043.svg" alt="Datica Logo"></div>
+        <nav>
+            <a href="//datica.com">Datica Home</a>
+            <a href="//datica.com/about-us">About</a>
+        </nav>
+    </div>
+</header>
+<header class="sub-header">
+    <div class="grid">
+        <h1 class="site-title">Datica Compliance</h1>
+        <a class="up-next" href="/#/">&gt; HIPAA Docs</a>
+        <div class="search">
+            <span class="icon"><img src="/assets/img/icons/search-670f5824.png" alt="Search Icon"></span>
+            <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+    </div>
+</header>
+<div class="grid">
+    <ul class="search-results"></ul>
+</div>
+
+        <div class="cf grid">
+            <aside class="menu">
+	<div id="toc"></div>
+</aside>
+<div class="device-controls">
+	<span class="hide-menu">CLOSE</span>
+	<span class="show-menu">MENU</span>
+</div>
+            <section class="content">
+                    <h1 id="datica-hipaa-compliance">Datica HIPAA Compliance</h1>
+
+<p>Learn how Datica not only complies with HIPAA, but builds a better, more secure environment to mitigate your risk and help you prove compliance with HIPAA. We did the hard work so you don&rsquo;t have to. And you can inherit a lot of the work that we&rsquo;ve done in terms of audits. Our HIPAA compliant API, platform, and data integration service simplify compliance for you. To learn more about our products or to get setup with an account today, check out our <a href="https://datica.com/compliant-cloud">Compliant Cloud</a> and <a href="https://datica.com/managed-integration">Managed Integration</a>.</p>
+
+<p>In an effort to be transparent, we go into a good amount detail on this page. As a lead in, below is a high level summary our major architecture, our guiding principles, and how it maximizes our security posture.</p>
+
+<table><thead>
+<tr>
+<th>Need</th>
+<th>Datica Approach</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Encryption</td>
+<td>All data is encrypted in transit, end to end, and at rest. Log data is also encrypted to mitigate risk of ePHI stored in log files.</td>
+</tr>
+<tr>
+<td>Minimum Necessary Access</td>
+<td>Access controls are always defaulted to no access unless overrided manually.</td>
+</tr>
+<tr>
+<td>System Access Tracking</td>
+<td>All access requests and changes of access, as well as approvals, are tracked and retained.</td>
+</tr>
+<tr>
+<td>PHI Segmentation</td>
+<td>All customer data is segmented. Additionally, all platform customers have a dedicated overlay network (subnet) for additional network segmentation.</td>
+</tr>
+<tr>
+<td>Monitoring</td>
+<td>All network requests, successful and unsuccessful, are logged, along with all system logs. API PHI requests (GET, POST, PUT, DELETE) log the requestor, location, and data changed/viewed. Additionally, alerts are proactively sent based on suspicious activity. OSSEC is used for IDS and file integrity monitoring.</td>
+</tr>
+<tr>
+<td>Auditing</td>
+<td>All log data is encrypted and unified, enabling secure access to full historical network activity records.</td>
+</tr>
+<tr>
+<td>Minimum Risk to Architecture</td>
+<td>Secure, encrypted access is the only form of public access enabled to servers. All API access must first pass through Datica firewalls. To gain full access to Datica systems, users must login via 2 factor authentication through VPN, authenticate to the specific system as a regular user, and upgrade privileges on the systems temporarily as needed.</td>
+</tr>
+<tr>
+<td>Vulnerability Scanning</td>
+<td>All customer and internal networks are scanned regularly for vulnerabilities.</td>
+</tr>
+<tr>
+<td>Intrusion Detection</td>
+<td>All production systems have intrusion detection software running to proactively detect anomalies.</td>
+</tr>
+<tr>
+<td>Backup</td>
+<td>All customer data is backed up every 24 hours. Seven (7) days of rolling backups are retained.</td>
+</tr>
+<tr>
+<td>Disaster Recovery</td>
+<td>Datica has an audited and regularly tested disaster recovery plan. This plan also applies to customers, and they inherit this from us.</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>All documentation (policies and procedures that make up our security and compliance program) is stored and versioned using GitHub, and published <a href="https://poliyc.datica.com">here</a>.</td>
+</tr>
+<tr>
+<td>Risk Management</td>
+<td>We proactively perform risk assessments to assure changes to our infrastructure do not expose new risks to ePHI. Risks mitigation is done before changes are pushed to production.</td>
+</tr>
+<tr>
+<td>Workforce Training</td>
+<td>Despite not having access to the ePHI of our customers, all Datica workforce members undergo HIPAA and security training regularly. Current training is hosted <a href="https://training.datica.com/">here</a>.</td>
+</tr>
+</tbody></table>
+
+<p>See the finer grain details of how we comply with HIPAA below. These are mapped to specific HIPAA rules. There&rsquo;s a lot here but again, we are taking this responsibility on so that our customers don&rsquo;t have to. Controls marked with an (Req) are <em>Required</em>. Controls marked with an (A) are <em>Addressable</em>. In our environment, controls outlined below are implemented on all infrastructure that processes, stores, transmits or can otherwise gain access to ePHI (electronic protected health information). If have questions, please <a href="mailto:hello@datica.com">email us</a>.</p>
+
+                    <h1 id="administrative-safeguards-(see-164.308)">Administrative Safeguards (see <a href="http://www.hhs.gov/ocr/privacy/hipaa/administrative/securityrule/adminsafeguards.pdf">164.308</a>)</h1>
+
+<p>Taken directly from the wording of the Security Rule, administrative safeguards are <em>administrative actions, and policies and procedures, to manage the selection, development, implementation, and maintenance of security measures to protect electronic protected health information and to manage the conduct of the covered entity&rsquo;s workforce in relation to the protection of that information.</em></p>
+
+<p>There aren&rsquo;t specific security settings in this section, and the most important area covered is the risk assessment. The risk assessment is a fundamental process for any organization that wants to become compliant.</p>
+
+<h2 id="security-management-process---164.308(a)(1)(i)">Security Management Process - 164.308(a)(1)(i)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Risk Analysis (Req)</td>
+<td>Conduct an accurate and thorough assessment of the potential risks and vulnerabilities to the confidentiality, integrity, and availability of electronic PHI held by the covered entity.</td>
+</tr>
+<tr>
+<td>Risk Management (Req)</td>
+<td>Implement security measures sufficient to reduce risks and vulnerabilities to a reasonable and appropriate level to comply with Sec. 164.306(a) [Security standards: General rules; (a) General requirements].</td>
+</tr>
+<tr>
+<td>Sanction Policy (Req)</td>
+<td>Apply appropriate sanctions against workforce members who fail to comply with the security policies and procedures of the covered entity.</td>
+</tr>
+<tr>
+<td>Information System Activity Review (Req)</td>
+<td>Implement procedures to regularly review records of information system activity, such as audit logs, access reports, and security incident tracking reports.</td>
+</tr>
+</tbody></table>
+
+<p>Datica Health, Inc. has a risk management policy that defines the risk analysis and risk management process. This policy is operationalized with processes to conduct regularly risk assessments. Datica uses NIST800-30 and 800-26 for performing risk analysis. Our policy begins with an inventory of all Datica systems, mapping of where ePHI is processed, transmitted, or stored, identification of threats, risks, and likelihood, and the mitigation of risks. Policies address risk inherent within the environment and mitigating the risk to an acceptable and reasonable level.</p>
+
+<p>Datica has a Sanction Policy that has sanctions for employees not adhering to certain policies, and for specifically violating HIPAA rules.</p>
+
+<p>Policies and procedures address the requirements of monitoring and logging system level events and actions taken by individuals within the environment. All requests into and out of the Datica network are logged, as well as all system events. Datica, has implemented multiple logging and monitoring solutions to track events within their environment and to monitor for certain types of behavior. Log data is regularly reviewed. Additionally, proactive alerts are enabled and triggered based on certain suspicious activity.</p>
+
+<h2 id="assigned-security-responsibility---164.308(a)(2)">Assigned Security Responsibility - 164.308(a)(2)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Assigned Security Responsibility (Req)</td>
+<td>Identify the security official who is responsible for the development and implementation of the policies and procedures required by this subpart for the entity.</td>
+</tr>
+</tbody></table>
+
+<p>Datica Health, Inc. has formally assigned and documented its security officer. Our security office is Adam Leko. He can be reached by email at adam [at] datica.com.</p>
+
+<h2 id="workforce-security---164.308(a)(3)(i)">Workforce Security - 164.308(a)(3)(i)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization and/or Supervision (A)</td>
+<td>Implement procedures for the authorization and/or supervision of workforce members who work with electronic protected health information or in locations where it might be accessed.</td>
+</tr>
+<tr>
+<td>Workforce Clearance Procedure (A)</td>
+<td>Implement procedures to determine that the access of a workforce member to electronic protected health information is appropriate.</td>
+</tr>
+<tr>
+<td>Termination Procedures (A)</td>
+<td>Implement procedures for terminating access to electronic protected health information when the employment of a workforce member ends or as required by determinations made as specified in paragraph (a)(3)(ii)(B) [Workforce Clearance Procedures] of this section.</td>
+</tr>
+</tbody></table>
+
+<p>Datica Health, Inc. has policies in place that require workforce members requesting access to ePHI to submit an authorization form that is signed and acknowledges their responsibility of safeguarding ePHI. The form must also be approved by the Security Officer. Once signed and approved, then the individual will be provisioned access to systems deemed business necessary. All Access to ePHI is based on minimum necessary requirements and least privilege. Datica cannot access ePHI unless customers explicitly grant access.</p>
+
+<p>Datica policies define the immediate removal of access once an employee has been terminated, with the Security Officer responsible for terminating the access. Once HR initiates the termination process the termination checklist is referenced to ensure necessary actions are taken to remove systems and facilities access.</p>
+
+<h2 id="information-access-management---164.308(a)(4)(i)">Information Access Management - 164.308(a)(4)(i)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Isolating Health care Clearinghouse Function (Req)</td>
+<td>If a health care clearinghouse is part of a larger organization, the clearinghouse must implement policies and procedures that protect the electronic protected health information of the clearinghouse from unauthorized access by the larger organization.</td>
+</tr>
+<tr>
+<td>Access Authorization (A)</td>
+<td>Implement policies and procedures for granting access to electronic protected health information, for example, through access to a workstation, transaction, program, process, or other mechanism.</td>
+</tr>
+<tr>
+<td>Access Establishment and Modification (A)</td>
+<td>Implement policies and procedures that, based upon the entity&rsquo;s access authorization policies, establish, document, review, and modify a user&rsquo;s right of access to a workstation, transaction, program, or process.</td>
+</tr>
+</tbody></table>
+
+<p>Datica Health, Inc. does not perform the functions of a Healthcare Clearinghouse so aspects of this section are not applicable.</p>
+
+<p>The security officer determines the roles necessary for each system and application. When access is needed to Datica infrastructure, a request and acknowledgement form is signed and then approved by the Security Officer.</p>
+
+<p>Datica has a formal process for requesting additional access to ePHI, and again Datica customers must approve all requests concerning ePHI.</p>
+
+<h2 id="security-awareness-and-training---164.308(a)(5)(i)">Security Awareness and Training - 164.308(a)(5)(i)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Security Reminders (A)</td>
+<td>Periodic security updates to all members of Datica Health, Inc.</td>
+</tr>
+<tr>
+<td>Protection from Malicious Software (A)</td>
+<td>Procedures for guarding against, detecting, and reporting malicious software.</td>
+</tr>
+<tr>
+<td>Log-in Monitoring (A)</td>
+<td>Procedures for monitoring log-in attempts and reporting discrepancies.</td>
+</tr>
+<tr>
+<td>Password Management (A)</td>
+<td>Procedures for creating, changing, and safeguarding passwords.</td>
+</tr>
+</tbody></table>
+
+<p>Datica health, Inc. has a Security Awareness training policy in place that requires new employees and current employees to conduct training upon hire and annually thereafter. Minimum training is done annually, with regular informal security and compliance training done every other week.</p>
+
+<p>Datica proactively assesses and tests for malicious software within their environment, both infrastructure and workstations. Members of the Datica team monitor bug and vulnerability lists to assure they remain up to date.</p>
+
+<p>Datica is monitoring and logging successful and unsuccessful log-in attempts to the servers within its environment and policies are in place requiring audit logging, which includes login attempts.</p>
+
+<p>Password configurations are set to require that passwords are a minimum of 8 character length, 90 day password expiration, account lockout after 5 invalid attempts, password history of last 4 passwords remembered, and account lockout after 15 minutes of inactivity.</p>
+
+<h2 id="security-incident-procedures---164.308(a)(6)(i)">Security Incident Procedures - 164.308(a)(6)(i)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Response and Reporting (Req)</td>
+<td>Identify and respond to suspected or known security incidents; mitigate, to the extent practicable, harmful effects of security incidents that are known to the covered entity; and document security incidents and their outcomes.</td>
+</tr>
+</tbody></table>
+
+<p>Datica has implemented a formal incident response plan (IRP), which discusses the procedures for identifying, responding to, and escalating suspected and confirmed security breaches. Datica has implemented an incident response team for the purposes of dealing with potential security breaches. The IRP has specific types of incidents to look out for, as well as some common types of incidents that are monitored for within the environment.</p>
+
+<h2 id="contingency-plan---164.308(a)(7)(i)">Contingency Plan - 164.308(a)(7)(i)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Data Backup Plan (Req)</td>
+<td>Establish and implement procedures to create and maintain retrievable exact copies of electronic protected health information.</td>
+</tr>
+<tr>
+<td>Disaster Recovery Plan (Req)</td>
+<td>Establish (and implement as needed) procedures to restore any loss of data.</td>
+</tr>
+<tr>
+<td>Emergency Mode Operation Plan (Req)</td>
+<td>Establish (and implement as needed) procedures to enable continuation of critical business processes for protection of the security of electronic PHI while operating in emergency mode.</td>
+</tr>
+<tr>
+<td>Testing and Revision Procedure (A)</td>
+<td>Implement procedures for periodic testing and revision of contingency plans.</td>
+</tr>
+<tr>
+<td>Applications and Data Criticality Analysis (A)</td>
+<td>Assess the relative criticality of specific applications and data in support of other contingency plan components.</td>
+</tr>
+</tbody></table>
+
+<p>Datica Health, Inc has a formal Backup and Recovery Policy that defines the data backup strategy including: schedule, associated responsibilities, and any risk-assessed exclusion to the backup schedule.</p>
+
+<p>Datica has a formal Disaster Recovery plan to ensure the efficient recovery of critical business data and systems in the event of a disaster. The DR plan includes specific technical procedures necessary to reinstate the infrastructure and data to allow critical business functions to continue business operations after a disaster has occurred. Additionally, the Datica DR plan includes requirements for performing annual testing of the DR plan to ensure its effectiveness.</p>
+
+<p>Datica has a DR plan, or a Business Continuity Plan (BCP), to aid in the efficient recovery of critical business functions after a disaster has been declared. The BCP goes into effect after facility outage of 24 hours. The BCP identifies critical information necessary to resume business operations such as: Hardware/software requirements, recovery time objectives, forms, employee/vendor contact lists, alternate working procedures, emergency access procedures, and a data and application criticality analysis. The BCP includes an Emergency Mode Operations Plan that addresses the access and protection of ePHI while operating in emergency mode.</p>
+
+<p>The DR and BPC plans are reviewed and tested annually or whenever significant infrastructure changes occur.</p>
+
+<p>Datica has a performed an applications and data criticality analysis that details what systems and application need be recovered and their specific order in the recovery process.</p>
+
+<h2 id="evaluation---164.308(a)(8)">Evaluation - 164.308(a)(8)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Evaluation (Req)</td>
+<td>Perform a periodic technical and non-technical evaluation, based initially upon the standards implemented under this rule and subsequently, in response to environmental or operational changes affecting the security of electronic PHI that establishes the extent to which an entity&rsquo;s security policies and procedures meet the requirements of this subpart.</td>
+</tr>
+</tbody></table>
+
+<p>Datica Health, Inc. has formal internal policies and procedures for conducting periodic technical and non-technical testing. These define procedures for performing quarterly internal and external vulnerability scanning, as well as annual penetration testing. Vulnerability scanning is performed regularly on a weekly basis and with any major changes in infrastructure. Additionally, non-technical evaluations occur on an annual basis to ensure that the security posture of Datica is at the defined level, approved by management, and communicated down to Datica employees.</p>
+
+<h2 id="business-associate-contracts-and-other-arrangement---164.308(b)(1)">Business Associate Contracts and Other Arrangement - 164.308(b)(1)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Written Contract or Other Arrangement (Req)</td>
+<td>A covered entity, in accordance with Â§ 164.306 [Security Standards: General Rules], may permit a business associate to create, receive, maintain, or transmit electronic protected health information on the covered entityâ€™s behalf only if the covered entity obtains satisfactory assurances, in accordance with Â§ 164.314(a) [Business Associate Contracts or Other Arrangements] that the business associate will appropriately safeguard the information. Document the satisfactory assurances required by paragraph (b)(1) [Business Associate Contracts and Other Arrangements] of this section through a written contract or other arrangement with the business associate that meets the applicable requirements of Â§ 164.314(a) [Business Associate Contracts or Other Arrangements].</td>
+</tr>
+</tbody></table>
+
+<p>Datica Health, Inc. has a formalized template, as well as policies in place regarding Business Associate Agreements and written contracts. Datica has engaged a third party provider for hosting responsibilities and has written attestations of safeguarding its data. Additionally, Datica performs due diligence in assuring that third party providers they select go through their due diligence process and provide services consistent with Datica&rsquo;s security and compliance posture.</p>
+
+                    <h1 id="physical-safeguards-(see-164.310)">Physical Safeguards (see <a href="http://www.hhs.gov/ocr/privacy/hipaa/administrative/securityrule/physsafeguards.pdf">164.310</a>)</h1>
+
+<p>This one is pretty straight forward - <em>physical measures, policies, and procedures to protect a covered entityâ€™s electronic information systems and related buildings and equipment, from natural and environmental hazards, and unauthorized intrusion.</em> Data center security is typically easier to address than office security, though at Datica we address both.</p>
+
+<h2 id="facility-access-controls---164.310(a)(1)">Facility Access Controls - 164.310(a)(1)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Contingency Operations (A)</td>
+<td>Establish (and implement as needed) procedures that allow facility access in support of restoration of lost data under the disaster recovery plan and emergency mode operations plan in the event of an emergency.</td>
+</tr>
+<tr>
+<td>Facility Security Plan (A)</td>
+<td>Implement policies and procedures to safeguard the facility and the equipment therein from unauthorized physical access, tampering, and theft.</td>
+</tr>
+<tr>
+<td>Access Control and Validation Procedures (A)</td>
+<td>Implement procedures to control and validate a person&rsquo;s access to facilities based on their role or function, including visitor control, and control of access to software programs for testing and revision.</td>
+</tr>
+<tr>
+<td>Maintenance Records (A)</td>
+<td>Implement policies and procedures to document repairs and modifications to the physical components of a facility which are related to security (for example, hardware, walls, doors, and locks).</td>
+</tr>
+</tbody></table>
+
+<p>Datica Health, Inc. infrastructure supporting its environments is hosted at Rackspace, AWS (Amazon Web Services) and Azure, which provides hosting and recovery services for the infrastructure.</p>
+
+<p>Datica headquarters also has any written policies and procedures for safeguarding the corporate location, which includes workstations with access to the environment, from unauthorized physical access. Smart locks are used to track access and all visitors are logged and escorted.</p>
+
+<p>The Datica environment is entirely hosted and built on hardware components provided by Rackspace, AWS and Azure which Datica would never have access into.</p>
+
+<h2 id="workstation-use---164.310(b)">Workstation Use - 164.310(b)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Workstation Use (Req)</td>
+<td>Implement policies and procedures that specify the proper functions to be performed, the manner in which those functions are to be performed, and the physical attributes of the surroundings of a specific workstation or class of workstation that can access ePHI.</td>
+</tr>
+</tbody></table>
+
+<p>Datica Health, Inc. has policies in place that define the acceptable uses in place for workstations within the environment. These policies define the acceptable and unauthorized uses of personnel that provided workstations with access to systems potentially interacting with ePHI. These policies are enforced on all workstations. All internal email uses HIPAA-compliant vendors.</p>
+
+<h2 id="workstation-security---164.310c">Workstation Security - 164.310c</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Workstation Security (Req)</td>
+<td>Implement physical safeguards for all workstations that access ePHI, to restrict access to authorized users.</td>
+</tr>
+</tbody></table>
+
+<p>Datica has a formal Workstation and Portable Media Security Policy that identifies the specific requirements of each device. The policies define the requirements for using and/or restricted specific actions while engaged with any ePHI. Additionally, workstations are secured appropriately to limit exposure to breaches. Firewalls and hard disk encryption are used on all workstations. Actions and events are monitored and controlled, with user restrictions on downloading or copying any ePHI without documented approval and business justification. Additionally, all file storage internally at Datica utilizes HIPAA-compliant cloud-based vendors (currently Box and Google Apps).</p>
+
+<h2 id="device-and-media-controls---164.310(d)(1)">Device and Media Controls - 164.310(d)(1)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Disposal (Req)</td>
+<td>Implement policies and procedures to address the final disposition of ePHI, and/or the hardware or electronic media on which it is stored.</td>
+</tr>
+<tr>
+<td>Media Re-use (Req)</td>
+<td>Implement procedures for removal of ePHI from electronic media before the media are made available for re-use.</td>
+</tr>
+<tr>
+<td>Accountability (A)</td>
+<td>Maintain a record of the movements of hardware and electronic media and any person responsible therefore.</td>
+</tr>
+<tr>
+<td>Data Backup and Storage (A)</td>
+<td>Create a retrievable, exact copy of electronic protected health information, when needed, before movement of equipment.</td>
+</tr>
+</tbody></table>
+
+<p>Datica has policies and procedures for all workstations that interact with and may potentially become exposed to ePHI. These policies have requirements for secure media disposal so that ePHI cannot be recovered from these systems.</p>
+
+<p>Datica has Media re-use requirements for the workstations, despite the fact that these workstations do not have access to and interaction with ePHI.</p>
+
+<h2 id="technical-safeguards-(see-164.312)">Technical Safeguards (see <a href="http://www.hhs.gov/ocr/privacy/hipaa/administrative/securityrule/techsafeguards.pdf">164.312</a>)</h2>
+
+<p>This section of HIPAA outlines <em>the technology and the policy and procedures for its use that protect electronic protected health information and control access to it.</em> It is important to note that these requirements are not prescriptive, and there is flexibility in implementation. The key is that measures that are reasonable and appropriate are implemented to safeguard ePHI.</p>
+
+<h2 id="access-control---164.312(a)(1)">Access Control - 164.312(a)(1)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Unique User Identification (Req)</td>
+<td>Assign a unique name and/or number for identifying and tracking user identity.</td>
+</tr>
+<tr>
+<td>Emergency Access Procedure (Req)</td>
+<td>Establish (and implement as needed) procedures for obtaining necessary electronic protected health information during an emergency.</td>
+</tr>
+<tr>
+<td>Automatic Logoff (A)</td>
+<td>Implement electronic procedures that terminate an electronic session after a predetermined time of inactivity.</td>
+</tr>
+<tr>
+<td>Encryption and Decryption (A)</td>
+<td>Implement a method to encrypt and decrypt electronic protected health information.</td>
+</tr>
+</tbody></table>
+
+<p>All users within the Datica environment are issued a unique user name and password. All accounts are local and unique. General/shared accounts are not in place and root access is restricted and monitored.</p>
+
+<p>Datica has procedures and a process for obtaining access to ePHI should an emergency or disaster occur.</p>
+
+<p>Datica systems settings on all of its servers have session timeout features enabled and configured to terminate sessions after a period of 30 minutes or less.</p>
+
+<p>Datica encrypts all stored data in its environment using 256-bit AES encryption. Additionally, all data in transit is encrypted end to end (more below).</p>
+
+<h2 id="audit-controls---164.312(b)">Audit Controls - 164.312(b)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Audit Controls (Req)</td>
+<td>Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI.</td>
+</tr>
+</tbody></table>
+
+<p>Datica Health, Inc. has policies in place addressing audit trail requirements. Systems within the its environment are logging to a centralized logging solution, Logstash, which is monitoring system level events and contains user id, timestamp, event, origination, and type of event. These logs are constantly monitored for suspicious events and alerts are generated to any type of behavior that is suspicious.</p>
+
+<h2 id="integrity---164.312c(1)">Integrity - 164.312c(1)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Mechanism to Authenticate Electronic Protected (A)</td>
+<td>Implement electronic mechanisms to corroborate that electronic protected health information has not been altered or destroyed in an unauthorized manner.</td>
+</tr>
+</tbody></table>
+
+<p>Datica has employed a centralized access control system for authenticating and accessing internal systems where ePHI resides. Currently, Datica employees access a bastion host using an SSH-2 connection to access internal systems. Accounts on the internal database are restricted to a limited number of personnel, with logging in place to track all transactions.</p>
+
+<h2 id="person-or-entity-authentication---164.312(d)">Person or Entity Authentication - 164.312(d)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Person or Entity Authentication (Req)</td>
+<td>Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed.</td>
+</tr>
+</tbody></table>
+
+<p>Datica Health, Inc. has a formal policy that describes the process of verifying a person&rsquo;s identity before unlocking their account, resetting their password, and/or providing access to ePHI.</p>
+
+<h2 id="transmission-security---164.312(e)(1)">Transmission Security - 164.312(e)(1)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Integrity Controls (A)</td>
+<td>Implement security measures to ensure that electronically transmitted ePHI is not improperly modified without detection.</td>
+</tr>
+<tr>
+<td>Encryption (A)</td>
+<td>Implement a mechanism to encrypt ePHI in transit.</td>
+</tr>
+</tbody></table>
+
+<p>All data in transit with Datica is sent over internet connections through an TLS1.1/TLS1.2 encrypted mechanism. Load balancers segment the traffic and send transmissions of the data to the application servers via an encrypted connection using the TLS protocol. Additionally, none of the internal application servers, database servers, and log and monitoring servers are accessible via public internet. All internal servers must be accessed via bastion host which are not accessible from the internet and require an SSH connection.</p>
+
+                    <h1 id="organizational-requirements-(see-164.314)">Organizational Requirements (see <a href="http://www.hhs.gov/ocr/privacy/hipaa/administrative/securityrule/pprequirements.pdf">164.314</a>)</h1>
+
+<p>These requirements simply outline the need for business associate agreements (BAAs) between covered entities and business associates. This requirement has recently been extended to require business associate agreements between business associates and all subcontractors. That linking, chaining together of of BAAs, has created for new and interesting legal and business questions. Basically, each layer in the chain of BAAs takes on certain responsibilities and certain risks as part of HIPAA, and there needs to be consistency. Case in point, at Datica we have several customers that have moved over from compliant IaaS providers because those providers had breach notification timelines that were not acceptable for large healthcare enterprises. We&rsquo;ve taken a proactive approach to BAAs to mitigate risk for our customers and assure consistency along the chain of BAAs.</p>
+
+<h2 id="business-associate-contracts-or-other-arrangements---164.314(a)(1)(i)">Business Associate Contracts or Other Arrangements - 164.314(a)(1)(i)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Business Associate Contracts (Req)</td>
+<td>The Implementation Specifications for the HIPAA Security Rule Organizational Requirements &ldquo;Business Associate Contracts or Other Arrangements&rdquo; standard were evaluated under section 164.308(b)(1) above.</td>
+</tr>
+<tr>
+<td>Other Arrangements (Req)</td>
+<td>Rules to engaging with additional 3rd parties, like subcontractors.</td>
+</tr>
+</tbody></table>
+
+<p>Datica has a formalized policy and process is in place concerning BAAs. BAA templates are in place and BA contracts are reviewed for consistency. All paying customers on Datica have BAAs in place. Datica has a formal policy and process in place for performing due diligence with any third party or vendor before engaging them. Additionally, contracts are retained that detail the responsibility of safeguarding any information to which the provider may have access, as well as creating consistency for Datica and Datica customers.</p>
+
+                    <h1 id="policies-and-procedures-and-documentation-requirements-(see-164.316)">Policies and Procedures and Documentation Requirements (see <a href="http://www.hhs.gov/ocr/privacy/hipaa/administrative/securityrule/pprequirements.pdf">164.316</a>)</h1>
+
+<h2 id="policies-and-procedures---164.316(a)">Policies and Procedures - 164.316(a)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Policies and Procedures (Req)</td>
+<td>Implement reasonable and appropriate policies and procedures to comply with the standards, implementation specifications, or other requirements of this subpart, taking into account those factors specified in Â§ 164.306(b)(2)(i), (ii), (iii), and (iv). This standard is not to be construed to permit or excuse an action that violates any other standard, implementation specification, or other requirements of this subpart.</td>
+</tr>
+</tbody></table>
+
+<p>Datica has a formalized Policy Management program that ensures that policies are developed, implemented, and updated according to best practice and organization requirements. In the words of our auditors, this is a policy about our policies.</p>
+
+<h2 id="documentation---164.316(b)(1)(i)">Documentation - 164.316(b)(1)(i)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Time Limit (Req)</td>
+<td>Retain the documentation required by paragraph (b)(1) of this section for 6 years from the date of its creation or the date when it last was in effect, whichever is later.</td>
+</tr>
+<tr>
+<td>Availability (Req)</td>
+<td>Make documentation available to those persons responsible for implementing the procedures to which the documentation pertains.</td>
+</tr>
+<tr>
+<td>Updates (Req)</td>
+<td>Review documentation periodically, and update as needed, in response to environmental or operational changes affecting the security of the electronic protected health information.</td>
+</tr>
+</tbody></table>
+
+<p>Datica retains the necessary policies and documentation for a minimum of 6 years. All policies and procedures are available and distributed to personnel on the company shared drive (currently Box and github). Datica has an update and review process for reviewing all policies and procedures and updating them as necessary. Additionally, Datica tracks and maintains revision history, approval signature, and timestamps to ensure policies are reviewed and updated according to organization requirements.</p>
+
+                    <h1 id="hitech-act-and-omnibus-rule:-it-security-provisions">HITECH Act and Omnibus Rule: <a href="http://www.gpo.gov/fdsys/pkg/FR-2013-01-25/pdf/2013-01073.pdf">IT Security Provisions</a></h1>
+
+<p>These were updates made to strengthen the Privacy, Security, and Breach Notifications rules within HIPAA. These updates went into effect in 2013 and were the driving force for many existing IaaS vendors to begin signing BAAs.</p>
+
+<h2 id="notification-in-the-case-of-breach---13402(a)-and-13402(b)">Notification in the Case of Breach - 13402(a) and 13402(b)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>In General</td>
+<td>A covered entity that accesses, maintains, retains, modifies, records, stores, destroys, or otherwise holds, uses, or discloses unsecured protected health information (as defined in subsection (h)(1)) shall, in the case of a breach of such information that is discovered by the covered entity, notify each individual whose unsecured protected health information has been, or is reasonably believed by the covered entity to have been, accessed, acquired, or disclosed as a result of such breach.</td>
+</tr>
+<tr>
+<td>Notification of Covered Entity by Business Associate</td>
+<td>The requirements for the HITECH Act Notification in the Case of Breach - Notification of Covered Entity by Business Associate - Uses and Disclosures: Organizational Requirements &ldquo;Business Associate Contracts&rdquo; standard are located in the &ldquo;BA Requirements&rdquo; worksheet.</td>
+</tr>
+</tbody></table>
+
+<p>Datica has a formal breach notification policy that addresses the requirements of notifying affected individuals and customers of a suspected breach of ePHI. These policies outline the relevant and responsible parties in case of a breach, forensics work to discover extent of breach, reason for breach, correction of infrastructure to prevent future breach, and requirements of notifying customers of a breach within 24 hours. Datica is a defined Business Associate or subcontractor according to HIPAA regulations and the specific customer relationship.</p>
+
+<h2 id="timeliness-of-notification---13402(d)(1)">Timeliness of Notification - 13402(d)(1)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>In General</td>
+<td>Subject to subsection (g), all notifications required under this section shall be made without unreasonable delay and in no case later than 60 calendar days after the discovery of a breach by the covered entity involved (or business associate involved in the case of a notification required under subsection (b)).</td>
+</tr>
+</tbody></table>
+
+<p>Datica has a breach notification policy that addresses the requirements of notifying the affected individuals or customers within 24 hours of a breach.</p>
+
+<h2 id="content-of-notification---13402(f)(1)">Content of Notification - 13402(f)(1)</h2>
+
+<table><thead>
+<tr>
+<th>Standard</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Description of Breach</td>
+<td>Regardless of the method by which notice is provided to individuals under this section, notice of a breach shall include, to the extent possible, the following: (1) A brief description of what happened, including the date of the breach and the date of the discovery of the breach, if known.</td>
+</tr>
+<tr>
+<td>Description of EPHI Involved</td>
+<td>(2) A description of the types of unsecured protected health information that were involved in the breach (such as full name, Social Security number, date of birth, home address, account number, or disability code).</td>
+</tr>
+<tr>
+<td>Actions by Individuals</td>
+<td>3) The steps individuals should take to protect themselves from potential harm resulting from the breach.</td>
+</tr>
+<tr>
+<td>Contact Procedures</td>
+<td>(5) Contact procedures for individuals to ask questions or learn additional information, which shall include a toll-free telephone number, an e-mail address, Web site, or postal address.</td>
+</tr>
+</tbody></table>
+
+<p>Datica has Breach Notification policies in place and they include a brief description of the breach, including the date of the breach and the date of the discovery of the breach, if known. Datica breach notification policies include a description of the types of unsecured protected health information that were involved in the breach (such as whether full name, Social Security number, date of birth, home address, account number, diagnosis, disability code or other types of PII were involved) and what the source of the breach was. Our breach notification policies include steps the individual should take to protect themselves from potential harm resulting from the breach. Our policies also provide the contact procedures for individuals to ask questions or learn additional information, which includes a toll-free telephone number, an e-mail address, Web site, or postal address.</p>
+
+                
+            </section>
+        </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script><script src="/assets/js/all-be410877.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -26,8 +26,4 @@ activate :search_engine_sitemap
 
 page "/sitemap.xml", :layout => false
 
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+set :build_dir, 'docs'
